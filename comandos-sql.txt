@@ -1,0 +1,42 @@
+Comandos SQL
+
+
+-- -> comentário
+
+SELECT * -> traz todos os dados  ex:
+SELECT 
+	Nome_Produto AS 'Nome do Produto'
+	Marca_Produto AS 'Marca do Produto'
+	COUNT(*) -- contagem de linhas
+	SUM(nome da coluna) -- soma dos valores da coluna 
+	AVG(nome da coluna) -- média dos valores da coluna
+	MIN(nome da coluna) -- mínimo dos valores da coluna 
+	MAX(nome da coluna) -- máximo dos valores da coluna
+
+FROM -> nome do banco de dados
+
+; -> somente no último comando
+
+WHERE -> estabelecer filtros   ex: 
+SELECT *
+FROM produtos
+WHERE marca_produto = 'DELL' OR 'SAMSUMG' -- soma dos conjuntos
+WHERE marca_produto = 'DELL' AND 'SAMSUMG' -- intersecção dos conjuntos
+
+GROUP BY -- agrupador  ex:
+SELECT
+	Sexo, -- coluna que quer agrupar
+	COUNT(*) AS 'Quantidade de Clientes' -- operação com os dados da coluna
+FROM clientes
+GROUP BY Sexo;
+
+INNER JOIN -- em 2 tabelas pega a intersecção dos dados  ex:
+SELECT
+	Tabela_A.coluna1,  -- Tabela_A -> tabela fato (contém int)
+	Tabela_A.coluna2,  -- Tabela_B -> tabela dimensão (contém string)
+	Tabela_A.coluna3,  -- chave primária -> coluna (normalmente da Tabela_B) que contém contador 
+	Tabela_B.coluna4,  -- chave estrangeira -> coluna que permite relacionar valores com a outra tabela
+FROM Tabela_A
+INNER JOIN Tabela_B
+	ON Tabela_A.id_chave_estrangeira = Tabela_B.id_chave_primaria 
+
