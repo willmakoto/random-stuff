@@ -1,0 +1,302 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[portuges]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+%\begin{figure}[!ht]
+%\centering
+%\includegraphics[width=2cm]{c:/ufba.jpg}
+%\end{figure}
+%Imagens dentro do ambiente multicols:
+%\begingroup
+%\centering
+%\includegraphics[width=10cm]{h:/Will/Trabalhos_2019/tabela_1.jpg}
+%\endgroup
+\usepackage[a4paper,left=1.5cm,right=1.5cm,top=2.5cm,bottom=2cm]{geometry}
+\usepackage{multicol}
+%\begin{multicols}{2}
+%\end{multicols}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{lipsum}
+
+
+\begin{document}
+\begin{center}
+\large\textbf{Relatório dos experimentos sobre circuito RC e circuito RL}\\
+\end{center}
+\begin{center}
+\small
+$^{1}$ Rafael Mendonça Borges, $^{2}$ Walter Francisco dos Santos Filho, $^{3}$ William Makoto Hakamada \\
+\end{center}
+\begin{center}
+\small
+$^{123}$ Departamento de Física, Universidade Estadual de Londrina, 86.057-970, Londrina, Paraná, Brasil. \\
+
+\end{center}
+\begin{center}
+\textit{26 de setembro de 2019}
+\end{center}
+        \begin{figure}[!ht]
+        \centering
+        \includegraphics[width=16cm]{h:/Will/Trabalhos/linha_preta.jpg}
+        \end{figure}
+\noindent Este relatório busca encontrar e observar relações em circuitos de corrente alternada quando na presença de dispositivos eletrônicos que garantem a existência de um certa reatância. Dessa forma, três práticas foram realizadas coletando dados de tensão e diferença de tempo entre um resistor de teste e um dispositivo de prova em diferentes frequências para um resistor, um capacitor e um indutor. Os resultados encontrados foram razoáveis e diferem levemente do esperado medido diretamente, levando à hipótese de uma limitação instrumental. Ademais, os valores característicos obtidos de cada prática pelo método gráfico foram: $R = (73,28\pm 0,99) \Omega$ , $C = (11,95\pm 0,11) \mu F$ e $L = (20,30\pm 1,33) mH$.
+        \begin{figure}[!ht]
+        \centering
+        \includegraphics[width=16cm]{h:/Will/Trabalhos/linha_preta.jpg}
+        \end{figure}
+\begin{multicols}{2}
+\section{Introdução}
+\paragraph{} De fato, ainda nos dias de hoje, o rádio é muito presente na vida das pessoas que o usa como fonte de informação e entretenimento. Além disso, o rádio também fora, outrora, o principal meio de comunicação em tempos de guerra, a saber, na Segunda Guerra Mundial. Dada tamanha importância, uma de suas principais propriedades é a forma de distinguir e selecionar faixas de frequências desejáveis feitas através de filtros.
+
+\paragraph{} Os filtros citados acima estão intimamente ligados à reatância de um circuito de corrente alternada determinada através de característica de elementos do circuito e da frequência angular de oscilação estabelecida pela fonte, itens importantíssimos durante a sincronização.  
+
+\paragraph{} A fim de notar as relações existentes entre a reatância e propriedades do circuito, estará incluso no relatório uma abordagem teórica buscando estabelecer algumas definições do que será estudado, seguido de uma análise prática em busca de alguns parâmetros a serem comparados com a medição direta. 
+
+\section{Métodos}
+\subsection{Modelo Teórico}
+\paragraph{} É denominado um circuito de corrente alternada qualquer circuito que esteja submetido a uma fonte cuja diferença de potencial varie conforme uma função senoidal do tempo:
+
+\begin{equation}
+V = V_0cos(\omega t).
+\end{equation}
+
+\paragraph{} Onde $V$ é a ddp em um tempo t, $V_0$ é a máxima diferença de potencial, ou amplitude, e $\omega$ é a frequência angular de oscilação.
+
+\paragraph{} Um tal circuito é percorrido por uma corrente elétrica que também varia senoidalmente conforme a seguinte equação:
+
+\begin{equation}
+i=i_0cos(\omega t).
+\end{equation}
+
+\paragraph{} Onde $i_0$ se trata da corrente máxima.
+
+\paragraph{} Considere inicialmente um circuito constituído por uma fonte de corrente alternada e um resistor. Levando em conta a equação (2) e a definição da resistência R, temos que a ddp no resistor é dada por:
+
+\begin{equation}
+V_R = Ri \rightarrow V_R = Ri_0cos(\omega t)
+\end{equation}
+\begin{equation}
+V_R = V_{R_0}cos(\omega t)
+\end{equation}
+
+\paragraph{} Onde $V_{R_0}$ é a ddp máxima no resistor.
+
+\paragraph{} Dando um passo adiante, considere agora um capacitor de capacitância $C$ no lugar do resistor. Uma vez que a ddp no capacitor $V_c$ depende de sua carga acumulada, uma boa proposta é usar sua definição e desenvolver algebricamente o conceito de carga para obter uma expressão conveniente da seguinte maneira:
+
+\begin{equation}
+V_c = \frac{q}{C} \rightarrow V_c = \frac{1}{C} \int \frac{dq}{dt} dt \rightarrow 
+\nonumber
+\end{equation}
+\begin{equation}
+V_c = \frac{1}{C} \int_0 ^t i_0cos(\omega t)dt \rightarrow V_c = \frac{1}{\omega C} i_0sen(\omega t) 
+\nonumber
+\end{equation}
+\begin{equation}
+\rightarrow V_c = \frac{1}{\omega C}i_0cos(\omega t - \frac{\pi}{2}).
+\end{equation}
+
+\paragraph{} Observe que a ddp máxima do capacitor será dada por:
+
+\begin{equation}
+V_{c_0} = \frac{i_0}{\omega C}.
+\end{equation}
+
+\paragraph{} Então, a partir de (5) e (6) é possível escrever:
+
+\begin{equation}
+Vc = V_{c_o} cos(\omega t - \frac{\pi}{2})
+\end{equation}
+
+\paragraph{} Duas conclusões podem ser feitas com base em (7). A primeira delas é o atraso de fase de $V_c$ em relação a $V$ que é de $\frac{\pi}{2} rad$. A segunda conclusão é uma analogia da equação (5) com a equação (3), sendo conveniente chamar o termo $X_c = \frac{1}{\omega C}$ de reatância capacitiva um vez que ele se comporta como um resistor no circuito capacitivo.
+
+\paragraph{} Fazendo o mesmo processo para um circuito indutivo usando o conceito de fem auto-induzida, temos:
+
+\begin{equation}
+V_L = L\frac{di}{dt} \rightarrow V_L = L \frac{d}{dt}[i_0cos(\omega t)] \rightarrow 
+\nonumber
+\end{equation}
+\begin{equation}
+V_L = -\omega L i_0sen(\omega t)
+\nonumber
+\end{equation}
+\begin{equation}
+\rightarrow V_L = \omega Li_0cos(\omega t + \frac{\pi}{2}).
+\end{equation}
+\begin{equation}
+V_L = V_{L_0}cos(\omega t + \frac{\pi}{2}).
+\end{equation}
+
+\paragraph{} Em que $V_{L_0}$ é a ddp máxima no indutor.
+
+\paragraph{} Sendo assim, a equação (9) nos indica que a fase de $V_L$ está adiantada $\frac{\pi}{2} rad$ em relação a $V$ e, também fazendo analogia com a equação (3), a partir de (8) definimos $X_L = \omega L$ como sendo a reatância indutiva do circuito. [1]
+
+\subsection{Métodos Experimentais}
+Para os experimentos de circuito resistivo, capacivo e indutivo, todos em corrente alternada, foram utilizados os equipamentos mostrados na figura 1:
+\begin{center}
+\begingroup
+    \centering
+    \includegraphics[width=5cm]{h:/Will/Trabalhos_2019/esquema_circuito.jpeg}
+\endgroup
+\end{center}
+Figura 1: Foto dos equipamentos usados nos experimentos, onde para a realização, foi necessário um gerador de frequência, que tem como objetivo alterar a frequência de oscilação; um capacitor; indutor; resistência e um osciloscópio que mostra em sua tela a voltagem da onda no eixo y, e o tempo que passa a corrente no eixo x. \\
+
+Esses equipamentos estão ligados um ao outro, para que formem um circuito resistivo, capacitivo ou indutivo, cujo capacitor na teoria tem um valor de capacitância de $15 \mu F$, o indutor uma indutância de $20 mH$ e a resistência $100 \Omega$. O gedador teve sua frequência variada de $200 Hz$ até $2000 Hz$ em intervalos de $200 Hz$ e seu erro foi aproximado para 0,5\% do valor da leitura. Assim com o osciloscópio mediu-se a tensão pico a pico entre os terminais do resistor e depois entre os terminais do capacitor ou indutor, afim de se mensurar a reatância capacitiva ou indutiva rescpectivamente, depedendo da prática que está sendo realizada.
+\section{Resultados e Discussão}
+Por uma dificuldade encontrada com os equipamentos, os dados para as práticas sobre curcuito resistivo e capacitivo foram adquiridos em conjunto com outras bancadas do laboratório.
+\subsection{Circuito Resistivo}
+Dados Coletados:
+\begin{center}
+\begingroup
+    \centering
+    \includegraphics[width=9cm]{h:/Will/Trabalhos_2019/tabela_1.jpg}
+\endgroup
+\end{center}
+Tabela 1: Relação entre as frequências, controladas pelo gerador de frequências; as tensões, mensuradas pelo osciloscópio; e a diferença de tempo entre as ondas, também mensurado pelo osciloscópio; onde $V_{rt}$ é a tensão no resistor teste de $10 \Omega$ e $V_{rp}$ é a tensão no resistor de interesse. \\
+
+A partir da análise desses dados, temos:
+\begin{center}
+\begingroup
+    \centering
+    \includegraphics[width=9cm]{h:/Will/Trabalhos_2019/tabela_2.jpg}
+\endgroup
+\end{center}
+Tabela 2: Dados inferidos a partir da análise dos dados coletados; onde $i$ é a corrente elétrica dada por: $i=V_{rt}/R_{t}$ e $R_{t}=10\Omega$, $R$ é a resistência do resistor de interesse dada por: $R=V_{rp}/i$, $\omega$ é a frequência angular dada por: $\omega=2.\pi . f$, e $\Delta \varphi$ é a diferença de fase entre as ondas dada por: $\Delta \varphi=\omega . \Delta t$; cada um com sua respectiva propagação de erro associada. \\
+
+Construindo um gráfico $R(\Omega)$ X $\omega(Hz)$ podemos verificar a dependência da resistência com a frequência angular.
+\begin{center}
+\begingroup
+    \centering
+    \includegraphics[width=9cm]{h:/Will/Trabalhos_2019/grafico_resistencia.jpg}
+\endgroup
+\end{center}
+Figura 2: Gráfico da resistência ($R$) em função da frequência angular ($\omega$), para o circuito resistivo. \\
+
+Como apresentado no modelo teórico, a resistência não deveria depender da frequência angular, portanto ignorando os dois primeiros pontos e traçando a regreção linear, o coeficiente linear da reta, é equivalente ao valor da resistência do resistor de interesse. Portanto, o valor da resistência pelo método gráfico é de $73,28 \pm 0,99 \Omega$.
+
+\subsection{Circuito Capacitivo}
+Dados Coletados:
+\begin{center}
+\begingroup
+    \centering
+    \includegraphics[width=9cm]{h:/Will/Trabalhos_2019/tabela_3.jpg}
+\endgroup
+\end{center}
+Tabela 3: Relação entre as frequências, controladas pelo gerador de frequências; as tensões, mensuradas pelo osciloscópio; e a diferença de tempo entre as ondas, também mensurado pelo osciloscópio; onde $V_{rt}$ é a tensão no resistor teste de $10 \Omega$ e $V_{c}$ é a tensão no capacitor. \\
+
+A partir da análise desses dados, temos:
+\begin{center}
+\begingroup
+    \centering
+    \includegraphics[width=8cm]{h:/Will/Trabalhos_2019/tabela_4.jpg}
+\endgroup
+\end{center}
+Tabela 4: Dados inferidos a partir da análise dos dados coletados; onde $i$ é a corrente elétrica dada por: $i=V_{rt}/R_{t}$ e $R_{t}=10\Omega$, $X_{C}$ é a reatância capacitiva dada por: $X_{C}=V_{c}/i$, $\omega$ é a frequência angular dada por: $\omega=2.\pi . f$, e $\Delta \varphi$ é a diferença de fase entre as ondas dada por: $\Delta \varphi=\omega . \Delta t$; cada um com sua respectiva propagação de erro associada. \\
+
+Construindo um gráfico $X_{C}(\Omega)$ X $[1/ \omega] (s)$ podemos verificar a dependência da reatância capacitiva com a frequência angular.
+\begin{center}
+\begingroup
+    \centering
+    \includegraphics[width=9cm]{h:/Will/Trabalhos_2019/grafico_reatancia_cap.jpg}
+\endgroup
+\end{center}
+Figura 3: Gráfico da reatância capacitiva ($X_{C}$) em função de ($1/ \omega$), para o circuito capacitivo. \\
+
+Como apresentado no modelo teórico, a reatância capacitiva deveria depender da frequência angular de acordo com a relação:
+\begin{center}
+$X_{C}=\dfrac{1}{\omega .C}$
+\end{center} 
+onde $C$ é a capacitância do capacitor. Traçando a regreção linear, o coeficiente angular da reta, é equivalente ao valor de $1/C$, pois:
+\begin{center}
+$C=\dfrac{1}{\omega .X_{C}}$ e $b=\omega .X_{C}$
+\end{center} 
+onde $b$ é o coeficiente angular da reta de ajuste. Portanto, o valor da capacitância do capacitor pelo método gráfico é de $(11,95 \pm 0,11) \mu F$.
+
+\subsection{Circuito Indutivo}
+Dados Coletados:
+\begin{center}
+\begingroup
+    \centering
+    \includegraphics[width=8cm]{h:/Will/Trabalhos_2019/tabela_5.jpg}
+\endgroup
+\end{center}
+Tabela 5: Relação entre as frequências, controladas pelo gerador de frequências; as tensões, mensuradas pelo osciloscópio; e a diferença de tempo entre as ondas, também mensurado pelo osciloscópio; onde $V_{rt}$ é a tensão no resistor teste de $10 \Omega$ e $V_{L}$ é a tensão no resistor de interesse. \\
+
+A partir da análise desses dados, temos:
+\begin{center}
+\begingroup
+    \centering
+    \includegraphics[width=8cm]{h:/Will/Trabalhos_2019/tabela_6.jpg}
+\endgroup
+\end{center}
+Tabela 6: Dados inferidos a partir da análise dos dados coletados; onde $i$ é a corrente elétrica dada por: $i=V_{rt}/R_{t}$ e $R_{t}=10\Omega$, $X_{L}$ é a reatância indutiva dada por: $X_{L}=V_{L}/i$, $\omega$ é a frequência angular dada por: $\omega=2.\pi . f$, e $\Delta \varphi$ é a diferença de fase entre as ondas dada por: $\Delta \varphi=\omega . \Delta t$; cada um com sua respectiva propagação de erro associada. \\
+
+Construindo um gráfico $X_{L}(\Omega)$ X $\omega(Hz)$ podemos verificar a dependência da resistência com a frequência angular.
+\begin{center}
+\begingroup
+    \centering
+    \includegraphics[width=9cm]{h:/Will/Trabalhos_2019/grafico_reatancia_ind.jpg}
+\endgroup
+\end{center}
+Figura 4: Gráfico da reatância indutiva ($\Omega$) em função da frequência angular ($\omega$), para o circuito indutivo. \\
+
+Como apresentado no modelo teórico, a reatância indutiva deveria depender da frequência angular de acordo com a relação:
+\begin{center}
+$X_{L}=\omega .L$
+\end{center} 
+onde $L$ é a indutância do indutor. Traçando a regreção linear, o coeficiente angular da reta, é equivalente ao valor de $L$, pois:
+\begin{center}
+$L=\dfrac{X_{L}}{\omega}$ e $b=\dfrac{X_{L}}{\omega}$
+\end{center} 
+onde $b$ é o coeficiente angular da reta de ajuste. Portanto, o valor da indutância do indutor pelo método gráfico é de $(20,30 \pm 1,33) mH$.
+\section{Conclusão}
+Foi concluido que os valores teóricos estão próximos dos experimentais, sendo a capacitância teórica de $10 \mu F$ e a experimental, encontrada através do método gráfico, foi de $(11,95 \pm 0,11) \mu F$. A indutância teória mensurada a partir de um multímetro foi de $34 mH$ e a experimental, encontrada através do método gráfico, foi de $(20,30 \pm 1,33) mH$. Finalmente, a resistência teórica é de $100 \Omega$ e experimental, encontrada através do método gráfico, foi de $73,28 \pm 0,99 \Omega$. \\
+
+Essa diferença de valores se da por conta de erros experimentais e um mal funcionamento dos cabos utilizados, onde esses erros podem ser diminuidos se houver uma troca para cabos sem mal contato, e osciloscópios mais novos. \\
+
+
+\noindent \textbf{\Large Referências}
+\begin{enumerate}
+\item Toginho Filho,D. O., Laureto, E, Catálogo de Experimentos do Laboratório Integrado de Física Geral Departamento de Física - “Circuitos simples em corrente alternada Resistor, Capacitor e Indutor” - Universidade Estadual de Londrina, Março de 2009.
+
+%backup-codes
+
+%w****@gmail.com
+
+%6459 7081
+%2869 7029
+%1100 1163
+
+%g**
+
+%bf9bd-0db9c
+%a3df0-8a20c
+%00470-6d921
+
+%h****@uel.br
+
+%2879 0028
+%7863 5608
+%5052 9089
+
+%\item YOUNG, Hugh D.; FREEDMAN, Roger A., FISICA IV - ÓTICA E FÍSICA MODERNA, 12a ed. São Paulo, Addison Wesley, 2008.
+
+
+
+%\item J.L. Duarte, C.R. Appoloni, A. Tannous, D.O. Toginho Filho, e F.V.D.Zapparoli, “Roteiros de Laboratório, Laboratório Física Geral IIB”, Universidade Estadual de Londrina, 2007. 
+
+%\item Halliday D., Resnick, R., Walker, J., “Fundamentos de Física 4”, Livros Técnicos e Científicos Editora, 4a Edição, São Paulo, 1996. 
+
+%\item Ueta, N; Vuolo, J. H. et al, Apostila de Laboratório de Física 4, “ Refração, Reflexão e Polarização”, USP, 1992
+
+%\item Young e Freedman - “Física IV” - 12ª Edição - Capítulo 33 e 34  São Paulo: Addison Wesley, 2009. 
+
+%\item  Toginho Filho, D. O., Zapparoli, F. V. D., Pantoja, J. C. S., - “Catálogo de Experimentos do Laboratório Integrado de Física Geral” - “Medições indiretas e propagação de erros” - Departamento de Física - Universidade Estadual de Londrina, Fevereiro de 2012.
+
+\end{enumerate}
+\end{multicols}
+\end{document}
+
